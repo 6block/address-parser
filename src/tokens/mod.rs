@@ -1,10 +1,12 @@
 mod aleo;
 mod autonomys;
 mod ironfish;
+mod qubic;
 
 pub use aleo::*;
 pub use autonomys::{is_valid_auto_address, Autonomys};
 pub use ironfish::*;
+pub use qubic::*;
 
 pub trait Token: 'static + Send + Sync + std::fmt::Debug {
     const NAME: &'static str;

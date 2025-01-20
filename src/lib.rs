@@ -32,6 +32,7 @@ pub async fn parse_handler(Query(params): Query<AddressQuery>) -> impl IntoRespo
         Aleo::NAME => is_valid_aleo_address(params.address),
         Autonomys::NAME => is_valid_auto_address(params.address),
         Ironfish::NAME => is_valid_iron_address(params.address),
+        Qubic::NAME => is_valid_qubic_address(params.address),
         _ => Err(anyhow!("Unknown token used")),
     };
 
