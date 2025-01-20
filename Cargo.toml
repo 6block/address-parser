@@ -1,0 +1,24 @@
+[package]
+name = "address-parser"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+axum = { version = "0.7.3", features = ["macros"] }
+base58 = "0.2.0"
+blake2 = "0.10.6"
+blake3 = { version = "1.5.4", default-features = false }
+clap = { version = "4.5.26", features = ["derive"] }
+derive_more = { version = "1.0.0", default-features = false, features = ["full"] }
+ironfish = { version = "0.3.0", features = ["download-params"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.137"
+snarkvm = { version = "1.1.0", features = ["console"] }
+ss58-registry = "1.51.0"
+thiserror = "2.0.0"
+tokio = { version = "1.43.0", features = ["full"] }
+tower = { version = "0.5.2", features = ["timeout"] }
+tower-http = { version = "0.6.2", features = ["cors"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
